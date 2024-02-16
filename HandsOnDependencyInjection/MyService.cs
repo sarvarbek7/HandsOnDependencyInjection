@@ -4,7 +4,7 @@
 	{
 		private readonly IRepositoryMock repository;
 
-		public MyService(IRepositoryMock repository)
+		public MyService([FromKeyedServices(ServiceKeys.Elyor)] IRepositoryMock repository)
 		{
 			this.repository = repository;
 		}
